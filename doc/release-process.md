@@ -134,9 +134,9 @@ rm SHA256SUMS
 - Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the bitcoin.org server
   into `/var/www/bin/bitcoin-core-${VERSION}`
 
-- Update dashpay.io version ***TODO***
+- Update boapay.io version ***TODO***
 
-  - First, check to see if the dashpay.io maintainers have prepared a
+  - First, check to see if the boapay.io maintainers have prepared a
     release: https://github.com/bitcoin/bitcoin.org/labels/Releases
 
       - If they have, it will have previously failed their Travis CI
@@ -155,11 +155,11 @@ rm SHA256SUMS
 
   - Dash-development mailing list
 
-  - Update title of #dashpay on Freenode IRC
+  - Update title of #boapay on Freenode IRC
 
-  - Optionally reddit /r/Dashpay, ... but this will usually sort out itself
+  - Optionally reddit /r/Boapay, ... but this will usually sort out itself
 
-- Notify Flare (?) ***TODO*** so that he can start building [https://launchpad.net/~dashpay/+archive/ubuntu/dash](the PPAs) ***TODO***
+- Notify Flare (?) ***TODO*** so that he can start building [https://launchpad.net/~boapay/+archive/ubuntu/dash](the PPAs) ***TODO***
 
 - Add release notes for the new version to the directory `doc/release-notes` in git master
 

@@ -32,7 +32,7 @@
   <string>Dash-Qt</string>
 
   <key>CFBundleIdentifier</key>
-  <string>io.dashpay.Dash-Qt</string>
+  <string>io.boapay.Dash-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -40,7 +40,7 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>io.dash.DashPayment</string>
+      <string>io.dash.BoaPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>dash</string>
@@ -65,7 +65,7 @@
         <string>application/x-dash-payment-request</string>
         <key>public.filename-extension</key>
         <array>
-          <string>dashpaymentrequest</string>
+          <string>boapaymentrequest</string>
         </array>
       </dict>
     </dict>

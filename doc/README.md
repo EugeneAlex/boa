@@ -34,7 +34,7 @@ Drag Dash-Qt to your applications folder, and then run Dash-Qt.
 
 * See the documentation at the [Dash Wiki](https://en.bitcoin.it/wiki/Main_Page) ***TODO***
 for help and more information.
-* Ask for help on [#dashpay](http://webchat.freenode.net?channels=dashpay) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=dashpay).
+* Ask for help on [#boapay](http://webchat.freenode.net?channels=boapay) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=boapay).
 * Ask for help on the [DashTalk](https://dashtalk.org/) forums.
 
 Building
@@ -58,7 +58,7 @@ The Dash repo's [root README](https://github.com/EugeneAlex/boa/blob/master/READ
 
 ### Resources
 * Discuss on the [DashTalk](https://dashtalk.org/) forums, in the Development & Technical Discussion board.
-* Discuss on [#dashpay](http://webchat.freenode.net/?channels=dashpay) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=dashpay).
+* Discuss on [#boapay](http://webchat.freenode.net/?channels=boapay) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=boapay).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)
