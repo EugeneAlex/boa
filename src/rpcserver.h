@@ -93,7 +93,7 @@ public:
 };
 
 /**
- * Dash RPC command dispatcher.
+ * Boa RPC command dispatcher.
  */
 class CRPCTable
 {

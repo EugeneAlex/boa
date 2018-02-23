@@ -33,7 +33,7 @@ Release Process
 
 	export SIGNER=(your gitian key, ie bluematt, sipa, etc)
 	export VERSION=(new version, e.g. 0.8.0)
-	pushd ./dash
+	pushd ./boa
 	git checkout v${VERSION}
 	popd
 	pushd ./gitian-builder
@@ -54,29 +54,29 @@ Release Process
 
   By default, gitian will fetch source files as needed. For offline builds, they can be fetched ahead of time:
 
-	make -C ../dash/depends download SOURCES_PATH=`pwd`/cache/common
+	make -C ../boa/depends download SOURCES_PATH=`pwd`/cache/common
 
   Only missing files will be fetched, so this is safe to re-run for each build.
 
-###Build Dash Core for Linux, Windows, and OS X:
+###Build Boa Core for Linux, Windows, and OS X:
 
-	./bin/gbuild --commit dash=v${VERSION} ../dash/contrib/gitian-descriptors/gitian-linux.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../dash/contrib/gitian-descriptors/gitian-linux.yml
-	mv build/out/dash-*.tar.gz build/out/src/dash-*.tar.gz ../
-	./bin/gbuild --commit dash=v${VERSION} ../dash/contrib/gitian-descriptors/gitian-win.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-win --destination ../gitian.sigs/ ../dash/contrib/gitian-descriptors/gitian-win.yml
-	mv build/out/dash-*.zip build/out/dash-*.exe ../
-	./bin/gbuild --commit bitcoin=v${VERSION} ../dash/contrib/gitian-descriptors/gitian-osx.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../dash/contrib/gitian-descriptors/gitian-osx.yml
-	mv build/out/dash-*-unsigned.tar.gz inputs/dash-osx-unsigned.tar.gz
-	mv build/out/dash-*.tar.gz build/out/dash-*.dmg ../
+	./bin/gbuild --commit boa=v${VERSION} ../boa/contrib/gitian-descriptors/gitian-linux.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../boa/contrib/gitian-descriptors/gitian-linux.yml
+	mv build/out/boa-*.tar.gz build/out/src/boa-*.tar.gz ../
+	./bin/gbuild --commit boa=v${VERSION} ../boa/contrib/gitian-descriptors/gitian-win.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-win --destination ../gitian.sigs/ ../boa/contrib/gitian-descriptors/gitian-win.yml
+	mv build/out/boa-*.zip build/out/boa-*.exe ../
+	./bin/gbuild --commit bitcoin=v${VERSION} ../boa/contrib/gitian-descriptors/gitian-osx.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../boa/contrib/gitian-descriptors/gitian-osx.yml
+	mv build/out/boa-*-unsigned.tar.gz inputs/boa-osx-unsigned.tar.gz
+	mv build/out/boa-*.tar.gz build/out/boa-*.dmg ../
 	popd
   Build output expected:
 
-  1. source tarball (dash-${VERSION}.tar.gz)
-  2. linux 32-bit and 64-bit binaries dist tarballs (dash-${VERSION}-linux[32|64].tar.gz)
-  3. windows 32-bit and 64-bit installers and dist zips (dash-${VERSION}-win[32|64]-setup.exe, dash-${VERSION}-win[32|64].zip)
-  4. OSX unsigned installer (dash-${VERSION}-osx-unsigned.dmg)
+  1. source tarball (boa-${VERSION}.tar.gz)
+  2. linux 32-bit and 64-bit binaries dist tarballs (boa-${VERSION}-linux[32|64].tar.gz)
+  3. windows 32-bit and 64-bit installers and dist zips (boa-${VERSION}-win[32|64]-setup.exe, boa-${VERSION}-win[32|64].zip)
+  4. OSX unsigned installer (boa-${VERSION}-osx-unsigned.dmg)
   5. Gitian signatures (in gitian.sigs/${VERSION}-<linux|win|osx-unsigned>/(your gitian key)/
 
 ###Next steps:
@@ -100,9 +100,9 @@ Commit your signature to gitian.sigs:
 	pushd ./gitian-builder
 	# Fetch the signature as instructed by Evan
 	cp signature.tar.gz inputs/
-	./bin/gbuild -i ../dash/contrib/gitian-descriptors/gitian-osx-signer.yml
-	./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../dash/contrib/gitian-descriptors/gitian-osx-signer.yml
-	mv build/out/dash-osx-signed.dmg ../dash-${VERSION}-osx.dmg
+	./bin/gbuild -i ../boa/contrib/gitian-descriptors/gitian-osx-signer.yml
+	./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../boa/contrib/gitian-descriptors/gitian-osx-signer.yml
+	mv build/out/boa-osx-signed.dmg ../boa-${VERSION}-osx.dmg
 	popd
 
 Commit your signature for the signed OSX binary:
@@ -151,15 +151,15 @@ rm SHA256SUMS
 
 - Announce the release:
 
-  - Release sticky on dashtalk: https://dashtalk.org/index.php?board=1.0 ***TODO***
+  - Release sticky on boatalk: https://boatalk.org/index.php?board=1.0 ***TODO***
 
-  - Dash-development mailing list
+  - Boa-development mailing list
 
   - Update title of #boapay on Freenode IRC
 
   - Optionally reddit /r/Boapay, ... but this will usually sort out itself
 
-- Notify Flare (?) ***TODO*** so that he can start building [https://launchpad.net/~boapay/+archive/ubuntu/dash](the PPAs) ***TODO***
+- Notify Flare (?) ***TODO*** so that he can start building [https://launchpad.net/~boapay/+archive/ubuntu/boa](the PPAs) ***TODO***
 
 - Add release notes for the new version to the directory `doc/release-notes` in git master
 

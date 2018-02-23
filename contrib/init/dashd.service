@@ -1,15 +1,15 @@
 [Unit]
-Description=Dash's distributed currency daemon
+Description=Boa's distributed currency daemon
 After=network.target
 
 [Service]
-User=dash
-Group=dash
+User=boa
+Group=boa
 
 Type=forking
-PIDFile=/var/lib/dashd/dashd.pid
-ExecStart=/usr/bin/dashd -daemon -pid=/var/lib/dashd/dashd.pid \
--conf=/etc/dash/dash.conf -datadir=/var/lib/dashd -disablewallet
+PIDFile=/var/lib/boad/boad.pid
+ExecStart=/usr/bin/boad -daemon -pid=/var/lib/boad/boad.pid \
+-conf=/etc/boa/boa.conf -datadir=/var/lib/boad -disablewallet
 
 Restart=always
 PrivateTmp=true

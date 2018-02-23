@@ -1,12 +1,12 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=Dash
-Comment=Dash P2P Cryptocurrency
-Comment[fr]=Dash, monnaie virtuelle cryptographique pair à pair
-Comment[tr]=Dash, eşten eşe kriptografik sanal para birimi
-Exec=dash-qt %u
+Name=Boa
+Comment=Boa P2P Cryptocurrency
+Comment[fr]=Boa, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Boa, eşten eşe kriptografik sanal para birimi
+Exec=boa-qt %u
 Terminal=false
 Type=Application
-Icon=dash128
-MimeType=x-scheme-handler/dash;
+Icon=boa128
+MimeType=x-scheme-handler/boa;
 Categories=Office;Finance;
