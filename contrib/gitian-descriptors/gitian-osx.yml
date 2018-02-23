@@ -1,5 +1,5 @@
 ---
-name: "boa-osx-0.12"
+name: "boa-osx-1.0.0.1"
 enable_cache: true
 suites:
 - "precise"
