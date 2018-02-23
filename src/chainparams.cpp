@@ -68,7 +68,7 @@ static const Checkpoints::CCheckpointData data = {
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
         boost::assign::map_list_of
-        (  0, uint256("0000020821b22889d258d33df0f01c2d0ccb59145402495331587b897a51ce70"))
+        (  0, uint256("0x0000020821b22889d258d33df0f01c2d0ccb59145402495331587b897a51ce70"))
         ;
 static const Checkpoints::CCheckpointData dataTestnet = {
         &mapCheckpointsTestnet,
@@ -79,7 +79,7 @@ static const Checkpoints::CCheckpointData dataTestnet = {
 
 static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
         boost::assign::map_list_of
-        ( 0, uint256("0x0000097378fdf4c93b3f2093d84eab99fafca9c038058706a7c7ee63dfb457a7"))
+        ( 0, uint256("0x342d175804743e5b44171e45420d9846b3dc8784759e45bfa8e852f544bf4356"))
         ;
 static const Checkpoints::CCheckpointData dataRegtest = {
         &mapCheckpointsRegtest,
@@ -102,7 +102,7 @@ public:
         pchMessageStart[1] = 0x6b;
         pchMessageStart[2] = 0x0c;
         pchMessageStart[3] = 0xbd;
-        vAlertPubKey = ParseHex("04908cb0b135314cdd978c90d71e92d6f75dbd6b185ff56fa380f2816a83908b38717c6f5dbbd1acc48191b1526fd6da2c8a6c795f975a18498828e834778c1200");
+        vAlertPubKey = ParseHex("044482f04fb4552d640071e7c37ffa0be87baac44622e56bde833b7816a66fafb8f132284b8865bfe9af318063858ffd4648cb959a356c1ad86243d7b6aa78aeac");
         nDefaultPort = 9843;
         bnProofOfWorkLimit = ~uint256(0) >> 20;  // Boa starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 525000;
