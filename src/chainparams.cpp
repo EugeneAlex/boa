@@ -201,7 +201,7 @@ public:
         nTargetSpacing = 60; // Boa: 2.5 minutes
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1519459200;
+        genesis.nTime = 1519459201;
         genesis.nNonce = 468395;
 
         hashGenesisBlock = genesis.GetHash();
@@ -266,7 +266,7 @@ public:
         nTargetTimespan = 24 * 60 * 60; // Boa: 1 day
         nTargetSpacing = 2.5 * 60; // Boa: 2.5 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
-        genesis.nTime = 1519459200;
+        genesis.nTime = 1519459202;
         genesis.nBits = 0x207fffff;
         genesis.nNonce = 0;
         hashGenesisBlock = genesis.GetHash();
