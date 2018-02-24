@@ -102,7 +102,7 @@ public:
         pchMessageStart[1] = 0x6b;
         pchMessageStart[2] = 0x0c;
         pchMessageStart[3] = 0xbd;
-        vAlertPubKey = ParseHex("044482f04fb4552d640071e7c37ffa0be87baac44622e56bde833b7816a66fafb8f132284b8865bfe9af318063858ffd4648cb959a356c1ad86243d7b6aa78aeac");
+        vAlertPubKey = ParseHex("04908cb0b135314cdd978c90d71e92d6f75dbd6b185ff56fa380f2816a83908b38717c6f5dbbd1acc48191b1526fd6da2c8a6c795f975a18498828e834778c1200");
         nDefaultPort = 9843;
         bnProofOfWorkLimit = ~uint256(0) >> 20;  // Boa starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 525000;
@@ -136,11 +136,11 @@ public:
         genesis.nVersion = 1;
         genesis.nTime    = 1519459200;
         genesis.nBits    = 0x1e0ffff0;
-        genesis.nNonce   = 28917698;
+        genesis.nNonce   = 1306738;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x00000ffd590b1485b3caadc19b22e6379c733355108f107a430458cdf3407ab6"));
-        assert(genesis.hashMerkleRoot == uint256("0xe0028eb9648db56b1ac77cf090b99048a8007e2bb64b68f092c03c7f56a662c7"));
+        assert(hashGenesisBlock == uint256("0x000004eb83e6baef0c5d4cb3c32c8a8365fd5979bed1ea429b37ec7aff33d71d"));
+        assert(genesis.hashMerkleRoot == uint256("0x83c0e1e3b827b0042a1ed027d20e9cf413dd5cf8dc071258465a1a26625e5e8b"));
 
         vSeeds.push_back(CDNSSeedData("darkcoin.io", "dnsseed.darkcoin.io"));
         vSeeds.push_back(CDNSSeedData("darkcoin.qa", "dnsseed.darkcoin.qa"));
@@ -205,7 +205,7 @@ public:
         genesis.nNonce = 3861367235;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x00000bafbc94add76cb75e2ec92894837288a481e5c005f6563d91623bf8bc2c"));
+        assert(hashGenesisBlock == uint256("0x0000020821b22889d258d33df0f01c2d0ccb59145402495331587b897a51ce70"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -271,7 +271,7 @@ public:
         genesis.nNonce = 1096447;
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 19844;
-        assert(hashGenesisBlock == uint256("0x000008ca1832a4baf228eb1553c03d3a2c8e02399550dd6ea8d65cec3ef23d2e"));
+        assert(hashGenesisBlock == uint256("0x342d175804743e5b44171e45420d9846b3dc8784759e45bfa8e852f544bf4356"));
 
         vFixedSeeds.clear(); //! Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();  //! Regtest mode doesn't have any DNS seeds.
