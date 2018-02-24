@@ -202,7 +202,7 @@ public:
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1519459200;
-        genesis.nNonce = 3861367235;
+        genesis.nNonce = 468395;
 
         hashGenesisBlock = genesis.GetHash();
         assert(hashGenesisBlock == uint256("0x0000020821b22889d258d33df0f01c2d0ccb59145402495331587b897a51ce70"));
@@ -268,7 +268,7 @@ public:
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         genesis.nTime = 1519459200;
         genesis.nBits = 0x207fffff;
-        genesis.nNonce = 1096447;
+        genesis.nNonce = 0;
         hashGenesisBlock = genesis.GetHash();
         nDefaultPort = 19844;
         assert(hashGenesisBlock == uint256("0x342d175804743e5b44171e45420d9846b3dc8784759e45bfa8e852f544bf4356"));
