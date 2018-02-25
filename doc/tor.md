@@ -52,11 +52,11 @@ reachable from the Tor network. Add these lines to your /etc/tor/torrc (or equiv
 config file):
 
 	HiddenServiceDir /var/lib/tor/boa-service/
-	HiddenServicePort 9999 127.0.0.1:9999
-	HiddenServicePort 19999 127.0.0.1:19999
+	HiddenServicePort 9843 127.0.0.1:9843
+	HiddenServicePort 19843 127.0.0.1:19843
 
 The directory can be different of course, but (both) port numbers should be equal to
-your boad's P2P listen port (9999 by default).
+your boad's P2P listen port (9843 by default).
 
 	-externalip=X   You can tell boa about its publicly reachable address using
 	                this option, and this can be a .onion address. Given the above
@@ -86,7 +86,7 @@ specify:
 
 	./boad ... -discover
 
-and open port 9999 on your firewall (or use -upnp).
+and open port 9843 on your firewall (or use -upnp).
 
 If you only want to use Tor to reach onion addresses, but not use it as a proxy
 for normal IPv4/IPv6 communication, use:
